@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: user
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      client:
+        reactive:
+          socket-timeout: 15000
+          endpoints: localhost:9200,localhost:9201
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 5946
+    url: jdbc:mysql://localhost:3306/lv_shi?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&allowPublicKeyRetrieval=true
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.wx.common.entity
+
+jwt:
+  #盐
+  secret: mySecret
+  #过期时间
+  expiration: 1800
+  #
+  tokenHead: bearer
+  #
+  tokenHeader: Authorization
+  #  {Authorization: "bearer sdfdsfsdfsdfdsfsdfadfdsf"}
+rabbitmq:
+  name : spirng-boot-rabbitmq-provider
+  host : 127.0.0.1
+  username : guest
+  password : guest
+server:
+  port: 8088 #运行端口号
+eureka:
+  instance:
+    hostname: localhost #指定主机地址
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    register-with-eureka: true #注册到Eureka的注册中心
+    fetch-registry: true #获取注册实例列表
+    service-url:
+      defaultZone: http://localhost:8761/eureka #配置注册中心地址
+    registry-fetch-interval-seconds: 10 # 设置服务消费者从注册中心拉取服务列表的间隔
+# Ribbon的常用配置
+ribbon:
+  ConnectTimeout: 1000 #服务请求连接超时时间（毫秒）
+  ReadTimeout: 5000 #服务请求处理超时时间（毫秒）
+  OkToRetryOnAllOperations: false #对超时请求启用重试机制
+  MaxAutoRetriesNextServer: 0 #切换重试实例的最大个数
+  MaxAutoRetries: 0 # 切换实例后重试最大次数
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000

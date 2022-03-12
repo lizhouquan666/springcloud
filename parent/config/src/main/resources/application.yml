@@ -1,0 +1,34 @@
+server:
+  port: 8901
+spring:
+  application:
+    name: config-server
+#  rabbitmq: #rabbitmq相关配置
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+  cloud:
+    config:
+      server:
+        git: #配置存储配置信息的Git仓库
+          uri: https://gitee.com/li-zhouquan/config.git
+          username: 15082858512
+          password: lzq8236598
+          clone-on-start: true #配置中心启动时直接从git获取配置
+#  security:
+#    user:
+#      password: 123456
+#      name: fzf
+eureka:
+  instance:
+    hostname: localhost #指定主机地址
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'

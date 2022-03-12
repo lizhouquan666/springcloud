@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="upload" />
+        <module name="new" />
+        <module name="auth" />
+        <module name="es" />
+        <module name="product" />
+        <module name="zuul" />
+        <module name="admin-server" />
+        <module name="user" />
+        <module name="message" />
+        <module name="code" />
+        <module name="team" />
+        <module name="eureka" />
+        <module name="config" />
+        <module name="common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-server" target="1.8" />
+      <module name="auth" target="1.8" />
+      <module name="code" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="config" target="1.8" />
+      <module name="es" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="message" target="1.8" />
+      <module name="myspringboot" target="1.8" />
+      <module name="new" target="1.8" />
+      <module name="parent" target="1.8" />
+      <module name="product" target="1.8" />
+      <module name="student" target="1.8" />
+      <module name="teacher" target="1.8" />
+      <module name="team" target="1.8" />
+      <module name="tearcher-api" target="1.8" />
+      <module name="upload" target="1.8" />
+      <module name="user" target="1.8" />
+      <module name="zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

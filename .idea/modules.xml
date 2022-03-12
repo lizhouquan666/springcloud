@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/parent/admin-server/admin-server.iml" filepath="$PROJECT_DIR$/parent/admin-server/admin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/auth/auth.iml" filepath="$PROJECT_DIR$/parent/auth/auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/code/code.iml" filepath="$PROJECT_DIR$/parent/code/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/common/common.iml" filepath="$PROJECT_DIR$/parent/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/config/config.iml" filepath="$PROJECT_DIR$/parent/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/es/es.iml" filepath="$PROJECT_DIR$/parent/es/es.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/eureka/eureka.iml" filepath="$PROJECT_DIR$/parent/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/message/message.iml" filepath="$PROJECT_DIR$/parent/message/message.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/new/new.iml" filepath="$PROJECT_DIR$/parent/new/new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/product/product.iml" filepath="$PROJECT_DIR$/parent/product/product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/team/team.iml" filepath="$PROJECT_DIR$/parent/team/team.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/upload/upload.iml" filepath="$PROJECT_DIR$/parent/upload/upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/user/user.iml" filepath="$PROJECT_DIR$/parent/user/user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/zuul/zuul.iml" filepath="$PROJECT_DIR$/parent/zuul/zuul.iml" />
+    </modules>
+  </component>
+</project>

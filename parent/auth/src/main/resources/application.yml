@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 5946
+    url: jdbc:mysql://localhost:3306/lv_shi?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&allowPublicKeyRetrieval=true
+  application:
+    name: auth
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    #续约更新时间间隔
+    lease-expiration-duration-in-seconds: 15
+    #续约更新时间间隔
+    hostname: localhost
+    #指定主机地址
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    healthcheck:
+      enabled: true
+    register-with-eureka: true
+    #注册到Eureka的注册中心
+    fetch-registry: true
+    #获取注册实例列表
+    service-url:
+      defaultZone:  http://localhost:8761/eureka
+      #配置注册中心地址
+    registry-fetch-interval-seconds: 10
+    # 设置服务消费者从注册中心拉取服务列表的间隔
+
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.wx.common.entity
+
+jwt:
+  #定义我们的盐  密码
+  secret: mySecret
+  #过期时间
+  expiration: 18000
+  #token 的类型 说明他以 bearer 开头
+  tokenHead: bearer
+  #token 对应的 key
+  tokenHeader: Authorization
+server:
+  port: 8888
+#  {Authorization: "bearer sdfdsfsdfsdfdsfsdfadfdsf"}
