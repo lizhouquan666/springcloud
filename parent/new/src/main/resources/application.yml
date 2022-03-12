@@ -9,7 +9,6 @@ spring:
         reactive:
           socket-timeout: 15000
           endpoints: localhost:9200,localhost:9201
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
