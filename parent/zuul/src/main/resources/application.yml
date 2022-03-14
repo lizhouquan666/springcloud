@@ -81,6 +81,7 @@ jwt:
 #  {Authorization: "bearer sdfdsfsdfsdfdsfsdfadfdsf"}
 
 pathList: 'user/,code/,product/,news/,upload,team/'
+
 ribbon:
   ConnectTimeot: 60000 # 连接超时时间（ms）
   ReadTimeot: 60000 # 通信超时时间（ms）
